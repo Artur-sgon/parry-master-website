@@ -1,12 +1,15 @@
 <html>
 <head>
-<title>*** Parry Master ***</title>
-<meta name="DESCRIPTION" content="The portal to the wonderful world of PARRY MASTER">
+    <title>*** Parry Master ***</title>
+    <meta name="DESCRIPTION" content="The portal to the wonderful world of PARRY MASTER">
 
-<!-- Load Professional DOS Fonts -->
-<link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="parry_master_style.css">
+    <!-- Load Professional DOS Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Shared Assets -->
+    <link rel="stylesheet" href="parry_master_style.css">
+    <script src="parry_master_shared.js"></script>
 </head>
 
 <body>
@@ -14,35 +17,16 @@
 <center>
     <table class="site-container">
         <tbody>
-            <!-- HEADER -->
+            <!-- HEADER (Injected by JS) -->
             <tr>
-                <td colspan="2" class="header-main">
-                    <h1 class="text-white gold-glow">Parry-Master.net</h1>
-                    <i class="text-white" style="background: rgba(0,0,0,0.5); padding: 2px 10px;">~ The Portal to the World of Parry Master ~</i>
-                </td>
+                <td colspan="2" class="header-main" id="shared-header"></td>
             </tr>
 
             <tr>
-                <!-- SIDEBAR -->
-                <td class="sidebar size-small">
-                    <b class="text-white">MAIN MENU</b>
-                    <hr>
-                    &raquo; <a href="#">Game mechanics</a><br>
-                    &raquo; <a href="parry_master_lore.html">Parry Master Lore</a><br>
-                    &raquo; <a href="#">Characters</a><br>                    
-                    &raquo; <a href="#">Development journal</a><br>
-                    &raquo; <a href="#">The team</a><br>
-                    &raquo; <a href="parry_master_ost.html">Soundtrack</a><br>
-                    <br>
-                    <b class="text-white">AWARDS</b>
-                    <hr>
-                    <center>
-                        <img src="https://web.archive.org/web/20091027083547im_/http://geocities.com/Tokyo/Pagoda/5461/coolsite.gif" width="80"><br>
-                        <span class="text-grey">Links2Go Award Winner</span>
-                    </center>
-                </td>
+                <!-- SIDEBAR (Injected by JS) -->
+                <td class="sidebar size-small" id="shared-sidebar"></td>
 
-                <!-- MAIN CONTENT AREA -->
+                <!-- MAIN CONTENT AREA (Unique to this page) -->
                 <td class="main-content">
                     <p>
                         <span class="text-cyan size-large">What is Parry Master?</span><br>
@@ -70,19 +54,14 @@
                 </td>
             </tr>
 
-            <!-- FOOTER -->
+            <!-- FOOTER (Injected by JS) -->
             <tr>
-                <td colspan="2" class="footer-main text-grey size-small">
-                    SITE UPDATED: FRIDAY 9 JANUARY 2026 | <a href="mailto:webmaster@parry-master.net">CONTACT</a>
-                    <br>
-                    <img src="https://web.archive.org/web/20091027005003im_/http://geocities.com/TimesSquare/Labyrinth/8301/counter.gif" alt="Hit Counter" style="margin: 10px; filter: contrast(2) brightness(0.8);">
-                    <br>
-                    <b>YOU ARE VISITOR NUMBER #84,291</b>
-                </td>
+                <td colspan="2" class="footer-main text-grey size-small" id="shared-footer"></td>
             </tr>
         </tbody>
     </table>
 
+    <!-- Geocities Badges -->
     <p>
         <img src="https://web.archive.org/web/20090830035041im_/http://geocities.com/Area51/Shire/6078/lynx.gif" border="0">
         <img src="https://web.archive.org/web/20091027083038im_/http://geocities.com/v_sharma/not_frontpage.gif" border="0">
