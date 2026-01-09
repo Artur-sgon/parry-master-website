@@ -1,0 +1,118 @@
+/* 1. FONT DEFINITIONS */
+/* Your Custom Title Font */
+@font-face {
+    font-family: 'DeutschFont';
+    src: url('parry_master_files/Deutsch.ttf') format('truetype');
+}
+
+/* Global DOS Font Rendering */
+* {
+    font-family: 'Perfect DOS VGA 437', 'VT323', monospace !important;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    font-weight: 400 !important;
+}
+
+/* 2. GLOBAL STYLES */
+body {
+    background-color: #000000;
+    background-image: url("parry_master_files/stone_wall.png");
+    background-repeat: repeat;
+    color: #888888;
+    font-size: 18px; 
+    line-height: 1.1;
+    margin: 20px;
+}
+
+a:link    { color: #fff71c; text-decoration: none; }
+a:visited { color: #76545e; }
+a:hover   { color: #FFFFFF; text-decoration: underline; background: #430505; }
+a:active  { color: #FF0000; }
+
+/* 3. LAYOUT ELEMENTS */
+.site-container {
+    border: 2px solid #333333;
+    background-color: #111111;
+    width: 880px;
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin: 20px auto;
+}
+
+.header-main {
+    background-image: url("parry_master_files/parry_master.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 180px;
+    text-align: center;
+    border: 1px solid #630808;
+    vertical-align: middle;
+}
+
+.footer-main {
+    background-color: #430505;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #630808;
+}
+
+.sidebar {
+    background-color: #000000;
+    vertical-align: top;
+    width: 250px;
+    padding: 15px;
+}
+
+.main-content {
+    background-color: #111111;
+    vertical-align: top;
+    padding: 20px;
+    text-align: justify;
+}
+
+.partner-box {
+    border: 1px solid #e06c00;
+    margin: 20px auto;
+    padding: 10px;
+    width: 85%;
+    background-color: #000000;
+}
+
+.partner-header {
+    background-color: #430505;
+    color: #FFFFFF;
+    padding: 5px;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #a2a2a2;
+    margin: 10px 0;
+}
+
+/* 4. TEXT CLASSES */
+.text-cyan    { color: #e06c00; }
+.text-red     { color: #FF0000; }
+.text-white   { color: #FFFFFF; }
+.text-grey    { color: #CCCCCC; }
+
+.gold-glow    { 
+    text-shadow: 1px 1px 0px #000000, 0 0 15px #a40000; 
+}
+
+.size-small   { font-size: 14px; }
+.size-large   { font-size: 28px; }
+
+/* TITLE SPECIFIC: Using Deutsch.ttf */
+h1 { 
+    font-family: 'DeutschFont', serif !important; /* Overrides the global font */
+    margin: 0; 
+    font-size: 72px; /* Adjusted for gothic font scaling */
+    letter-spacing: 2px;
+    font-weight: normal !important;
+}

@@ -1,0 +1,35 @@
+function contact() {
+<!--
+//
+// arguments are name followed by node fractions in reversed order.
+// with 1 or 2 arguments default node is used.
+// with 0 arguments the following address is used: nobody at net.
+//
+var atc1 = "&#64;";
+var lix2 = "&#105;";
+var dot3 = ".";
+var nod4 = "net";
+var nam5 = "nobody";
+var max6 = "ma";
+var col7 = "&#58;";
+var m6l2 = max6 + lix2 + "l"
+if (arguments.length != 0) {
+	nod4 = "shog" + lix2 + dot3 + nod4;
+	nam5 = arguments[0];
+	}
+if (arguments.length > 2) {
+	nod4 = arguments[1];
+	for (var i = 2; i < arguments.length; i++) {
+		nod4 = arguments[i] + dot3 + nod4;
+		}
+	}
+var actZ = m6l2 + "to" + col7 + nam5 + atc1 + nod4;
+var sb6 = ' onMouseOver=\"window.status=' + "' ";
+var sb7 = "Send " + m6l2 + " to " + nam5 + "';" + ' return true;' + '\"';
+var sb8 = ' onMouseOut=\"window.status=' + "''; ";
+var sb9 = ' return true;' + '\"';
+var ctrZ = sb6 + sb7 + sb8 + sb9 + ">" + nam5;
+var actlin = 'E-' + m6l2 + ': <a href=\"' + actZ + '\"' + ctrZ + '</a>';
+document.write(actlin);
+//-->
+}

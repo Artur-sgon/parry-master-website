@@ -1,0 +1,267 @@
+--- START OF FILE parry_master_ost.html ---
+
+<html>
+<head>
+<title>*** Parry Master - Soundtrack ***</title>
+<meta name="DESCRIPTION" content="Official soundtrack of Parry Master. Composed by Artur and Mauro.">
+
+<!-- Load Professional DOS Fonts -->
+<link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="parry_master_style.css">
+
+<style>
+    /* PLAYER CONSOLE STYLES */
+    .player-console {
+        background-color: #000;
+        border: 1px solid #e06c00;
+        padding: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .now-playing-box {
+        color: #198e3c;
+        font-size: 16px;
+        margin-bottom: 5px;
+        border-bottom: 1px dashed #430505;
+        padding-bottom: 5px;
+        height: 20px;
+    }
+
+    /* Shorter Wave Graphic */
+    .visualizer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 15px; 
+        gap: 3px;
+        margin: 5px 0 10px 0;
+    }
+
+    .bar {
+        width: 8px;
+        background-color: #198e3c;
+        height: 3px; 
+        transition: height 0.1s;
+    }
+
+    /* Animation when playing */
+    .playing .bar {
+        animation: wave 0.5s infinite alternate;
+    }
+    .playing .bar:nth-child(2) { animation-delay: 0.1s; }
+    .playing .bar:nth-child(3) { animation-delay: 0.2s; }
+    .playing .bar:nth-child(4) { animation-delay: 0.3s; }
+    .playing .bar:nth-child(5) { animation-delay: 0.4s; }
+
+    @keyframes wave {
+        from { height: 3px; }
+        to { height: 12px; }
+    }
+
+    /* Volume Slider Styling */
+    .volume-controls {
+        font-size: 14px;
+        color: #888888;
+    }
+
+    input[type=range] {
+        cursor: pointer;
+        width: 150px;
+        accent-color: #e06c00;
+    }
+
+    /* TABLE STYLES */
+    .track-list {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .track-row {
+        border-bottom: 1px solid #333;
+    }
+    .track-number {
+        color: #e06c00;
+        width: 30px;
+        padding: 10px 5px;
+    }
+    .track-info {
+        padding: 10px 5px;
+    }
+    .track-category {
+        font-size: 12px;
+        color: #666;
+        text-transform: uppercase;
+    }
+    .audio-controls {
+        text-align: right;
+        padding: 10px 5px;
+        white-space: nowrap;
+    }
+    .btn-audio {
+        background: #222;
+        border: 1px solid #e06c00;
+        color: #e06c00;
+        padding: 2px 8px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 4px;
+    }
+    .btn-audio:hover { background: #e06c00; color: #000; }
+</style>
+
+<script>
+    let currentAudio = null;
+
+    function controlAudio(trackId, title, action) {
+        const audio = document.getElementById('audio-' + trackId);
+        const display = document.getElementById('current-track-name');
+        const visualizer = document.getElementById('visualizer');
+        const slider = document.getElementById('volume-slider');
+
+        if (action === 'play') {
+            if (currentAudio && currentAudio !== audio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+            
+            currentAudio = audio;
+            currentAudio.volume = slider.value;
+            currentAudio.play();
+            
+            display.innerText = title;
+            visualizer.classList.add('playing');
+        } 
+        else if (action === 'pause') {
+            if (currentAudio) {
+                currentAudio.pause();
+                visualizer.classList.remove('playing');
+            }
+        } 
+        else if (action === 'stop') {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                display.innerText = "---";
+                visualizer.classList.remove('playing');
+            }
+        }
+    }
+
+    function updateVolume(val) {
+        if (currentAudio) {
+            currentAudio.volume = val;
+        }
+    }
+</script>
+</head>
+
+<body>
+
+<center>
+    <table class="site-container">
+        <tbody>
+            <tr>
+                <td colspan="2" class="header-main">
+                    <h1 class="text-white gold-glow">Parry-Master.net</h1>
+                    <i class="text-white" style="background: rgba(0,0,0,0.5); padding: 2px 10px;">~ The Portal to the World of Parry Master ~</i>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="sidebar size-small">
+                    <b class="text-white">MAIN MENU</b>
+                    <hr>
+                    &raquo; <a href="parry_master.html">Home</a><br>
+                    &raquo; <a href="#">Game mechanics</a><br>
+                    &raquo; <a href="parry_master_lore.html">Parry Master Lore</a><br>
+                    &raquo; <a href="#">Characters</a><br>                    
+                    &raquo; <a href="#">Development journal</a><br>
+                    &raquo; <a href="#">The team</a><br>
+                    &raquo; <a href="parry_master_ost.html">Soundtrack</a><br>
+                    <br>
+                    <b class="text-white">AWARDS</b>
+                    <hr>
+                    <center>
+                        <img src="https://web.archive.org/web/20091027083547im_/http://geocities.com/Tokyo/Pagoda/5461/coolsite.gif" width="80"><br>
+                        <span class="text-grey">Links2Go Award Winner</span>
+                    </center>
+                </td>
+
+                <td class="main-content">
+                    <span class="text-cyan size-large">Original Sound Track</span><br>
+                    <span class="text-grey size-small">Composed by Artur and Mauro | Arranged via Suno</span>
+                    <hr>
+
+                    <!-- PLAYER CONSOLE -->
+                    <div class="player-console">
+                        <div class="now-playing-box">
+                            NOW PLAYING: <span id="current-track-name">---</span>
+                        </div>
+                        
+                        <div id="visualizer" class="visualizer">
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                        </div>
+
+                        <div class="volume-controls">
+                            VOLUME: <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5" oninput="updateVolume(this.value)">
+                        </div>
+                    </div>
+
+                    <table class="track-list">
+                        <script>
+                            const tracks = [
+                                { n: 1, title: "Intro/Title screen", cat: "Menu" },
+                                { n: 2, title: "Tutorial & Practice", cat: "Fight" },
+                                { n: 3, title: "Story Prologue", cat: "Cinematic" },
+                                { n: 4, title: "Master", cat: "Fight" },
+                                { n: 5, title: "Victory", cat: "Menu" },
+                                { n: 6, title: "Game Over", cat: "Menu" },
+                                { n: 7, title: "Map screen", cat: "Menu" },
+                                { n: 8, title: "Master skill lesson", cat: "Fight" },
+                                { n: 9, title: "Story Part 1", cat: "Cinematic" },
+                                { n: 10, title: "Weiller", cat: "Fight" },
+                                { n: 11, title: "Story Part 2", cat: "Cinematic" },
+                                { n: 12, title: "Boss #2", cat: "Fight" },
+                                { n: 13, title: "Story Part 3", cat: "Cinematic" },
+                                { n: 14, title: "Boss #3", cat: "Fight" },
+                                { n: 15, title: "Story Part 4", cat: "Cinematic" },
+                                { n: 16, title: "Final Boss", cat: "Fight" },
+                                { n: 17, title: "The End", cat: "Cinematic" }
+                            ];
+
+                            tracks.forEach(t => {
+                                document.write(`
+                                    <tr class="track-row">
+                                        <td class="track-number">${t.n}.</td>
+                                        <td class="track-info">
+                                            <span class="text-white">${t.title}</span><br>
+                                            <span class="track-category">[ ${t.cat} ]</span>
+                                            <audio id="audio-${t.n}" src="audio/track${t.n}.mp3"></audio>
+                                        </td>
+                                        <td class="audio-controls">
+                                            <button class="btn-audio" onclick="controlAudio(${t.n}, '${t.title}', 'play')">PLAY</button>
+                                            <button class="btn-audio" onclick="controlAudio(${t.n}, '${t.title}', 'pause')">PAUSE</button>
+                                            <button class="btn-audio" onclick="controlAudio(${t.n}, '${t.title}', 'stop')">STOP</button>
+                                        </td>
+                                    </tr>
+                                `);
+                            });
+                        </script>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="footer-main text-grey size-small">
+                    SITE UPDATED: FRIDAY 9 JANUARY 2026 | <a href="mailto:webmaster@parry-master.net">CONTACT</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+
+</body>
+</html>
