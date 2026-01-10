@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <b class="text-white">MAIN MENU</b>
             <hr>
             &raquo; <a href="parry_master.html">Home</a><br>
-            &raquo; <a href="#">Development journal</a><br>
+            &raquo; <a href="parry_master_devlog.html">Devlog</a><br>
             &raquo; <a href="parry_master_mechanics.html">Game mechanics</a><br>
             &raquo; <a href="parry_master_structure.html">Game structure (PT/BR) *NEW!</a><br>
             &raquo; <a href="parry_master_text_database.html">In-Game Text Database *NEW!</a><br>
