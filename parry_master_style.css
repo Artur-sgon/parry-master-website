@@ -1,11 +1,9 @@
 /* 1. FONT DEFINITIONS */
-/* Your Custom Title Font */
 @font-face {
     font-family: 'DeutschFont';
     src: url('parry_master_files/Deutsch.ttf') format('truetype');
 }
 
-/* Global DOS Font Rendering */
 * {
     font-family: 'Perfect DOS VGA 437', 'VT323', monospace !important;
     -webkit-font-smoothing: none;
@@ -15,6 +13,7 @@
     image-rendering: crisp-edges;
     font-weight: 400 !important;
 }
+
 
 /* 2. GLOBAL STYLES */
 body {
@@ -72,6 +71,8 @@ a:active  { color: #FF0000; }
     vertical-align: top;
     padding: 20px;
     text-align: justify;
+    /* FIX: Explicitly setting this to 16px to match the Lore page's appearance */
+    font-size: 16px; 
 }
 
 .partner-box {
@@ -108,11 +109,10 @@ hr {
 .size-small   { font-size: 14px; }
 .size-large   { font-size: 28px; }
 
-/* TITLE SPECIFIC: Using Deutsch.ttf */
 h1 { 
-    font-family: 'DeutschFont', serif !important; /* Overrides the global font */
+    font-family: 'DeutschFont', serif !important;
     margin: 0; 
-    font-size: 72px; /* Adjusted for gothic font scaling */
+    font-size: 72px; 
     letter-spacing: 2px;
     font-weight: normal !important;
 }

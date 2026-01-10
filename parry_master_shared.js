@@ -18,19 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
             <b class="text-white">MAIN MENU</b>
             <hr>
             &raquo; <a href="parry_master.html">Home</a><br>
-            &raquo; <a href="#">Game mechanics</a><br>
-            &raquo; <a href="parry_master_lore.html">Parry Master Lore *NEW!</a><br>
-            &raquo; <a href="#">Characters</a><br>                    
             &raquo; <a href="#">Development journal</a><br>
-            &raquo; <a href="#">The team</a><br>
+            &raquo; <a href="parry_master_mechanics.html">Game mechanics</a><br>
+            &raquo; <a href="parry_master_structure.html">Game structure (PT/BR) *NEW!</a><br>
+            &raquo; <a href="parry_master_text_database.html">In-Game Text Database *NEW!</a><br>
+            &raquo; <a href="parry_master_lore.html">Parry Master Lore!</a><br>
+            &raquo; <a href="#">Characters</a><br>                    
             &raquo; <a href="parry_master_ost.html">Soundtrack *NEW!</a><br>
-            <br>
-            <b class="text-white">AWARDS</b>
-            <hr>
-            <center>
-                <img src="https://web.archive.org/web/20091027083547im_/http://geocities.com/Tokyo/Pagoda/5461/coolsite.gif" width="80"><br>
-                <span class="text-grey">Links2Go Award Winner</span>
-            </center>
+           
+           
         `;
     }
 

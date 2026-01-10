@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>*** Parry Master - Game Mechanics ***</title>
+    <meta name="DESCRIPTION" content="Learn the combat systems and strategies of Parry Master.">
+    <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="parry_master_style.css">
+    <!-- Link to the shared script -->
+    <script src="parry_master_shared.js"></script>
+</head>
+
+<body>
+
+<center>
+    <table class="site-container">
+        <tbody>
+            <!-- HEADER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="header-main" id="shared-header"></td>
+            </tr>
+
+            <tr>
+                <!-- SIDEBAR (Injected by JS) -->
+                <td class="sidebar size-small" id="shared-sidebar"></td>
+
+                <!-- MAIN CONTENT AREA -->
+                <td class="main-content">
+                    <span class="text-cyan size-large">Parry Master Fight System</span>
+                    <hr>
+                    
+                    <blockquote>
+                    <p class="text-cyan"> 
+                        "Hark, and fix this in thy soul: until the Six Sacred Tenets of War are mastered, thy path shall remain forever barren."<br>
+                        -- Master
+                    </p>
+                    </blockquote>
+
+                    <b class="text-white">1. Defending:</b>
+                    <ul>
+                        <li>Hold block to defend against your opponent's attacks. This will consume your guard bar.</li>
+                        <li>If your guard bar is depleted, you'll be unable to block.</li>
+                    </ul>
+
+                    <b class="text-white">2. Basic attack:</b>
+                    <ul>
+                        <li>Press any direction to perform the basic attack.</li>
+                        <li>Your opponent will block your attack unless you hit the unprotected area.</li>
+                        <li>Basic attacks don't inflict significant damage, but they fill your special bar.</li>
+                        <li>The special bar is reset to zero when you are blocked or hit.</li>
+                    </ul>
+
+                    <b class="text-white">3. Special attack:</b>
+                    <ul>
+                        <li>Land three successful basic attacks to earn one special attack.</li>
+                        <li>You need a full special bar to perform a special attack.</li>
+                        <li>To perform a special attack, hold block and press any direction.</li>
+                        <li>You can have a maximum of 3 special attacks at any given time.</li>
+                    </ul>
+
+                    <b class="text-white">4. Super attack:</b>
+                    <ul>
+                        <li>You earn a super attack when you fill 3 special bars.</li>
+                        <li>To perform a super attack, hold the special button and press any direction.</li>
+                        <li>You can only have one super attack at any given time.</li>
+                    </ul>
+
+                    <b class="text-white">5. Parry and Counter attack:</b>
+                    <ul>
+                        <li>To parry, press block just before an attack hits.</li>
+                        <li>A successful parry will restore a point to your guard bar and stun the opponent.</li>
+                        <li>Any attack on a stunned opponent turns into a counter attack and inflicts extra damage.</li>
+                    </ul>
+
+                    <b class="text-white">6. Player VS Opponent Attack:</b>
+                    <ul>
+                        <li>The player's basic and special attacks only interrupt the opponent's basic attack.</li>
+                        <li>The player's super attack interrupts both the opponent's basic and special attacks.</li>
+                        <li>The opponent's super attack cannot be interrupted; it can only be blocked or parried.</li>
+                    </ul>
+
+                    <!-- OPPONENT VULNERABILITY SECTION -->
+                    <br>
+                    <span class="text-cyan size-large">Opponent vulnerability</span>
+                    <hr>
+                    
+                    <p>
+                        Knowing where to strike is as important as knowing how to strike. Use the guide below 
+                        to find the openings in your enemy's stance:
+                    </p>
+
+                    <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-bottom: 20px;">
+                        <tr class="partner-header">
+                            <td style="width: 50%; border: 1px solid #333;"><b>Opponent Blocking</b></td>
+                            <td style="width: 50%; border: 1px solid #333;"><b>Vulnerable Area</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Up</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Down</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Down</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Up</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Right</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Left</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Left</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Right</td>
+                        </tr>
+
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Opponent Attacking</b></td>
+                            <td style="border: 1px solid #333;"><b>Vulnerable Area</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Up</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Down</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Down</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Up</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Right</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Left</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Left</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Right</td>
+                        </tr>
+
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Opponent's Attack Parried</b></td>
+                            <td style="border: 1px solid #333;"><b>Vulnerable Area</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Up</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Up</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Down</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Down</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Right</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Right</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Left</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Left</td>
+                        </tr>
+                    </table>
+
+                    <p class="text-red" style="text-align: center; margin-top: 20px;">
+                        <b>STRATEGY TIP: Strike where the enemy is most exposed!</b>
+                    </p>
+                </td>
+            </tr>
+
+            <!-- FOOTER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="footer-main text-grey size-small" id="shared-footer"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Geocities Badges -->
+    <p>
+        <img src="https://web.archive.org/web/20090830035041im_/http://geocities.com/Area51/Shire/6078/lynx.gif" border="0">
+        <img src="https://web.archive.org/web/20091027083038im_/http://geocities.com/v_sharma/not_frontpage.gif" border="0">
+    </p>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>*** Parry Master - Structure ***</title>
+    <meta name="DESCRIPTION" content="Game design notes and structure for Parry Master.">
+
+    <!-- Load Professional DOS Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Shared Assets -->
+    <link rel="stylesheet" href="parry_master_style.css">
+    <script src="parry_master_shared.js"></script>
+
+    <!-- Estilo específico para esta página para suportar acentos -->
+    <style>
+        .main-content, .main-content * {
+            font-family: 'Courier New', Courier, monospace !important;
+            font-weight: bold !important; /* Courier fica melhor em rascunhos com um pouco de peso */
+            letter-spacing: 0px !important;
+        }
+        
+        .main-content span.size-large {
+            font-size: 24px !important;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<center>
+    <table class="site-container">
+        <tbody>
+            <!-- HEADER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="header-main" id="shared-header"></td>
+            </tr>
+
+            <tr>
+                <!-- SIDEBAR (Injected by JS) -->
+                <td class="sidebar size-small" id="shared-sidebar"></td>
+
+                <!-- MAIN CONTENT AREA -->
+                <td class="main-content">
+                    <span class="text-cyan size-large">Game Structure (draft)</span>
+                    <hr>
+                    
+                    <p>
+                        O jogo (a princípio) não vai ter escolha de personagem. Squire é o nome provisório do protagonista.
+                        Antes de começar, há uma opção de "tutorial" pra aprender a mecânica básica da luta:
+                    </p>
+                    <ul>
+                        <li>Block</li>
+                        <li>Parry</li>
+                        <li>Basic attack</li>
+                        <li>Basic Counter attack</li>
+                    </ul>
+
+                    <p>
+                        (Special attack, Super attack e Combos vão ser "new skills" q serão desbloqueadas ao longo do jogo; 
+                        pensei nisso pra criar a sensação de progresso --ter uma tela de "character stats" mostrando uns cadeadinhos na área de "skills").
+                    </p>
+
+                    <b class="text-white">A Lore e o Início</b>
+                    <p>
+                        Acho importante criar uma "lore" ainda q simples, pra ajudar na ambientação, estética e vibe geral pro jogo, além de ajudar a criar a conexão emocional tbm. 
+                    </p>
+                    <p>
+                        Considerando isso, a primeira luta eu penso em ser contra o seu "mestre" q é o mesmo personagem q aparece no "tutorial". 
+                        Ele exige q o protagonista o vença, pra provar q está pronto pra embarcar na sua busca, missão, etc. 
+                        Ao derrotar o mestre, vc desbloqueia a primeira skill: <b class="text-white">Special attack</b>. Você pode escolher entrar no tutorial pra aprender como usá-la.
+                    </p>
+
+                    <b class="text-white">O Mapa e os Chefões</b>
+                    <p>
+                        Em seguida, abre uma tela simples mostrando um mapa em que a gente vê três lugares representando os 3 chefões que a gente tem q derrotar. 
+                        Só com os 3 derrotados vc pode ir pro Final Boss. 
+                    </p>
+                    <p>
+                        A cada chefe derrotado, vc pode conversar com o mestre (q vai ta no canto do mapa) pra aprender uma nova skill. 
+                        HOWEVER!, vc tem q derrotar ele pra poder aprender cada skill. É um jeito de justificar mais combates, ideia q tirei do jogo "Fighter's Destiny" pro N64. 
+                        Aliás, poderia ter um preço q o mestre te cobra pra ensinar. Se vc perde a luta, vc tem q voltar e derrotar um boss outra vez pra poder pagar o mestre.
+                    </p>
+
+                    <b class="text-white">Organização de Skills</b>
+                    <ul>
+                        <li>Os boss podem seguir uma sequência pré-definida (a la jogo de luta clássico), ou vc pode escolher (a la Megaman);</li>
+                        <li>Da mesma forma, as skills podem ser aprendidas numa sequência pré-definida, ou vc pode escolher qual aprender.</li>
+                        <li>Ou ainda, cada skill tá associada a um boss.</li>
+                    </ul>
+
+                    <b class="text-white">Todas "skills":</b>
+                    <p>
+                        - Block / Parry / Basic attack / Basic Counter attack<br>
+                        - Special attack (ganha na primeira luta contra o mestre)<br>
+                        <i class="text-grey">(bloqueadas): Special counter attack, Super attack, Super counter attack, Combo A, Combo B, Combo C</i>
+                    </p>
+
+                    <b class="text-white">Final Boss</b>
+                    <p>
+                        O final boss já fica liberado assim q os três boss foram derrotados. Algumas ideias:
+                    </p>
+                    <ul>
+                        <li>Deixar ele de fato invencível (mostrando o HP dele <b class="text-red">"???"</b>), e a leader board mostra quem teve maior "score" considerando tempo de luta, quem tira mais vida, etc.</li>
+                        <li>Deixar o HP dele mostrando "???" porém de fato dá pra matar ele.</li>
+                        <li>Mostrar o HP dele "999.999", algo bizarro.</li>
+                    </ul>
+
+                    <p class="text-red" style="text-align: center; margin-top: 40px;">
+                        <b>[FIM DO DRAFT]</b>
+                    </p>
+                </td>
+            </tr>
+
+            <!-- FOOTER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="footer-main text-grey size-small" id="shared-footer"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Geocities Badges -->
+    <p>
+        <img src="https://web.archive.org/web/20090830035041im_/http://geocities.com/Area51/Shire/6078/lynx.gif" border="0">
+        <img src="https://web.archive.org/web/20091027083038im_/http://geocities.com/v_sharma/not_frontpage.gif" border="0">
+    </p>
+</center>
+
+</body>
+</html>
