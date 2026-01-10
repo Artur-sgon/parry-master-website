@@ -31,10 +31,17 @@ body {
     margin: 20px;
 }
 
-a:link    { color: #fff71c; text-decoration: none; }
+/* Default Link Colors */
+a:link    { color: #d8b000; text-decoration: none; }
 a:visited { color: #76545e; }
 a:hover   { color: #FFFFFF; text-decoration: underline; background: #430505; }
 a:active  { color: #FF0000; }
+
+/* FIX: Sidebar Menu Links - Always stay yellow even if visited */
+.sidebar a:link, 
+.sidebar a:visited { 
+    color: #d8b000; 
+}
 
 /* 3. LAYOUT ELEMENTS */
 .site-container {
@@ -69,6 +76,7 @@ a:active  { color: #FF0000; }
     vertical-align: top;
     width: 250px;
     padding: 15px;
+    line-height: 1.8;
 }
 
 .main-content {
@@ -121,7 +129,6 @@ h1 {
     font-weight: normal !important;
 }
 
-/* NEW SUBTITLE STYLE */
 h2 {
     font-family: 'Alagard', serif !important;
     color: #e06c00;
