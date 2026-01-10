@@ -4,6 +4,11 @@
     src: url('parry_master_files/Deutsch.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Alagard';
+    src: url('parry_master_files/alagard.ttf') format('truetype');
+}
+
 * {
     font-family: 'Perfect DOS VGA 437', 'VT323', monospace !important;
     -webkit-font-smoothing: none;
@@ -71,7 +76,6 @@ a:active  { color: #FF0000; }
     vertical-align: top;
     padding: 20px;
     text-align: justify;
-    /* FIX: Explicitly setting this to 16px to match the Lore page's appearance */
     font-size: 16px; 
 }
 
@@ -114,5 +118,15 @@ h1 {
     margin: 0; 
     font-size: 72px; 
     letter-spacing: 2px;
+    font-weight: normal !important;
+}
+
+/* NEW SUBTITLE STYLE */
+h2 {
+    font-family: 'Alagard', serif !important;
+    color: #e06c00;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
     font-weight: normal !important;
 }

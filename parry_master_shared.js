@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         header.innerHTML = `
             <h1 class="text-white gold-glow">Parry-Master.net</h1>
             <i class="text-white" style="background: rgba(0,0,0,0.5); padding: 2px 10px;">
-                ~ The Portal to the World of Parry Master ~
+                -- The Portal to the World of Parry Master --
             </i>
         `;
     }
@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
             &raquo; <a href="parry_master_mechanics.html">Game mechanics</a><br>
             &raquo; <a href="parry_master_structure.html">Game structure (PT/BR) *NEW!</a><br>
             &raquo; <a href="parry_master_text_database.html">In-Game Text Database *NEW!</a><br>
-            &raquo; <a href="parry_master_lore.html">Parry Master Lore!</a><br>
-            &raquo; <a href="#">Characters</a><br>                    
+            &raquo; <a href="parry_master_lore.html">Parry Master Lore</a><br>
+            &raquo; <a href="parry_master_characters.html">Characters</a><br>                    
             &raquo; <a href="parry_master_ost.html">Soundtrack *NEW!</a><br>
            
            
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const footer = document.getElementById('shared-footer');
     if (footer) {
         footer.innerHTML = `
-            SITE UPDATED: FRIDAY 9 JANUARY 2026 | <a href="mailto:webmaster@parry-master.net">CONTACT</a>
+            SITE UPDATED: SATURDAY 10, JANUARY 2026 | <a href="#">CONTACT</a>
             <br>
             <img src="https://web.archive.org/web/20091027005003im_/http://geocities.com/TimesSquare/Labyrinth/8301/counter.gif" alt="Hit Counter" style="margin: 10px; filter: contrast(2) brightness(0.8);">
             <br>
