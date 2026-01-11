@@ -1,0 +1,198 @@
+<html>
+<head>
+    <title>*** Parry Master - Devlog ***</title>
+    <meta name="DESCRIPTION" content="The history and legends of the Parry Master world.">
+
+    <!-- Load Professional DOS Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Shared Assets -->
+    <link rel="stylesheet" href="parry-master-style.css">
+    <script src="parry-master-shared.js"></script>
+    <style>
+        .roadmap-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #333;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .roadmap-table td, .roadmap-table th {
+            border: 1px solid #333;
+            padding: 4px 8px;
+            text-align: left;
+        }
+        .status-ready { color: #00ff00; } 
+        .status-wip { color: #fff71c; }   
+        .status-done { color: #0252ff; }
+        
+        /* Spacing for groups */
+        .spacer-row td {
+            height: 15px;
+            border-left: none !important;
+            border-right: none !important;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+<center>
+    <table class="site-container">
+        <tbody>
+            <!-- HEADER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="header-main" id="shared-header"></td>
+            </tr>
+
+            <tr>
+                <!-- SIDEBAR (Injected by JS) -->
+                <td class="sidebar size-small" id="shared-sidebar"></td>
+
+                <!-- MAIN CONTENT AREA -->
+                <td class="main-content">
+                    <h2>Devlog</h2>
+                    <hr>
+                    <p class="text-white">
+                        2025:
+                    </p>
+                    <p>
+                        We did a bunch of shit.
+                    </p>
+                   
+                    <p class="text-white">
+                        Friday, 9th January 2026:
+                    </p>
+                    <p>
+                        Website up!
+                    </p>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h2>Art Roadmap</h2>
+                    <hr>
+                    
+                    <p style="padding-left: 40px;">
+                        <span class="status-wip">wip</span> : Work in progress<br>
+                        <span class="status-done">done</span> : Art assets are done; implementation pending<br>
+                        <span class="status-ready">ready</span> : Art assets fully implemented into the game<br>
+                    </p>
+                
+
+                    <p>
+                        <b class="text-white">Character:</b> Squire
+                    </p>
+
+                    <table class="roadmap-table">
+                        <tr class="partner-header">
+                            <th>Animation name</th>
+                            <th>Status</th>
+                            <th>Deadline</th>
+                        </tr>
+                        
+                        <!-- HURT GROUP -->
+                        <tr><td>hurt_up</td><td class="status-wip">wip</td><td>16th January</td></tr>
+                        <tr><td>hurt_down</td><td class="status-wip">wip</td><td>16th January</td></tr>
+                        <tr><td>hurt_right</td><td class="status-wip">wip</td><td>16th January</td></tr>
+                        <tr><td>hurt_left</td><td class="status-wip">wip</td><td>16th January</td></tr>
+                        
+                        <tr class="spacer-row"><td colspan="3"></td></tr>
+
+                        <!-- STUN GROUP -->
+                        <tr><td>stun_up</td><td class="status-wip">wip</td><td>23rd January</td></tr>
+                        <tr><td>stun_down</td><td class="status-wip">wip</td><td>23rd January</td></tr>
+                        <tr><td>stun_right</td><td class="status-wip">wip</td><td>23rd January</td></tr>
+                        <tr><td>stun_left</td><td class="status-wip">wip</td><td>23rd January</td></tr>
+                        
+                        <tr class="spacer-row"><td colspan="3"></td></tr>
+
+                        <!-- PARRY GROUP -->
+                        <tr><td>parry_up</td><td class="status-wip">wip</td><td>30th January</td></tr>
+                        <tr><td>parry_down</td><td class="status-wip">wip</td><td>30th January</td></tr>
+                        <tr><td>parry_right</td><td class="status-wip">wip</td><td>30th January</td></tr>
+                        <tr><td>parry_left</td><td class="status-wip">wip</td><td>30th January</td></tr>
+                        
+                        <tr class="spacer-row"><td colspan="3"></td></tr>
+
+                        <!-- BLOCKS & IDLE -->
+                        <tr><td>idle</td><td class="status-ready">ready</td><td>---</td></tr>
+                        
+                        <tr class="spacer-row"><td colspan="3"></td></tr>
+
+                        <tr><td>block_in</td><td class="status-wip">wip</td><td>6th February</td></tr>
+                        <tr><td>block_cycle</td><td class="status-wip">wip</td><td>6th February</td></tr>
+                        <tr><td>block_out</td><td class="status-wip">wip</td><td>6th February</td></tr>
+                        <tr><td>idle_no_shield</td><td class="status-wip">wip</td><td>6th February</td></tr>
+                        <tr><td>block_up</td><td class="status-wip">wip</td><td>6th February</td></tr>
+                        <tr><td>block_down</td><td class="status-wip">wip</td><td>6th February</td></tr>
+                        <tr><td>block_right</td><td class="status-wip">wip</td><td>6th February</td></tr>
+                        <tr><td>block_left</td><td class="status-wip">wip</td><td>6th February</td></tr>
+                        
+                        <tr class="spacer-row"><td colspan="3"></td></tr>
+
+                        <!-- IMPACTS -->
+                        <tr><td>block_impact_up</td><td class="status-wip">wip</td><td>13th February</td></tr>
+                        <tr><td>block_impact_down</td><td class="status-wip">wip</td><td>13th February</td></tr>
+                        <tr><td>block_impact_right</td><td class="status-wip">wip</td><td>13th February</td></tr>
+                        <tr><td>block_impact_left</td><td class="status-wip">wip</td><td>13th February</td></tr>
+                        
+                        <tr class="spacer-row"><td colspan="3"></td></tr>
+
+                        <!-- BASIC ATTACKS -->
+                        <tr><td>normal_attack_up</td><td class="status-wip">wip</td><td>20th February</td></tr>
+                        <tr><td>normal_attack_down</td><td class="status-wip">wip</td><td>20th February</td></tr>
+                        <tr><td>normal_attack_right</td><td class="status-wip">wip</td><td>20th February</td></tr>
+                        <tr><td>normal_attack_left</td><td class="status-wip">wip</td><td>20th February</td></tr>
+                        <tr><td>normal_counter_attack_up</td><td class="status-wip">wip</td><td>27th February</td></tr>
+                        <tr><td>normal_counter_attack_down</td><td class="status-wip">wip</td><td>27th February</td></tr>
+                        <tr><td>normal_counter_attack_right</td><td class="status-wip">wip</td><td>27th February</td></tr>
+                        <tr><td>normal_counter_attack_left</td><td class="status-wip">wip</td><td>27th February</td></tr>
+                        
+                        <tr class="spacer-row"><td colspan="3"></td></tr>
+
+                        <!-- SPECIALS -->
+                        <tr><td>special_attack_up</td><td class="status-wip">wip</td><td>13th March</td></tr>
+                        <tr><td>special_attack_down</td><td class="status-wip">wip</td><td>13th March</td></tr>
+                        <tr><td>special_attack_right</td><td class="status-wip">wip</td><td>13th March</td></tr>
+                        <tr><td>special_attack_left</td><td class="status-wip">wip</td><td>13th March</td></tr>
+                        <tr><td>special_counter_attack_up</td><td class="status-wip">wip</td><td>20th March</td></tr>
+                        <tr><td>special_counter_attack_down</td><td class="status-wip">wip</td><td>20th March</td></tr>
+                        <tr><td>special_counter_attack_right</td><td class="status-wip">wip</td><td>20th March</td></tr>
+                        <tr><td>special_counter_attack_left</td><td class="status-wip">wip</td><td>20th March</td></tr>
+                        
+                        <tr class="spacer-row"><td colspan="3"></td></tr>
+
+                        <!-- SUPERS -->
+                        <tr><td>super_attack_up</td><td class="status-wip">wip</td><td>27th March</td></tr>
+                        <tr><td>super_attack_down</td><td class="status-wip">wip</td><td>27th March</td></tr>
+                        <tr><td>super_attack_right</td><td class="status-wip">wip</td><td>27th March</td></tr>
+                        <tr><td>super_attack_left</td><td class="status-wip">wip</td><td>27th March</td></tr>
+                        <tr><td>super_counter_attack_up</td><td class="status-wip">wip</td><td>3rd April</td></tr>
+                        <tr><td>super_counter_attack_down</td><td class="status-wip">wip</td><td>3rd April</td></tr>
+                        <tr><td>super_counter_attack_right</td><td class="status-wip">wip</td><td>3rd April</td></tr>
+                        <tr><td>super_counter_attack_left</td><td class="status-wip">wip</td><td>3rd April</td></tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- FOOTER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="footer-main text-grey size-small" id="shared-footer"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Geocities Badges -->
+    <p>
+        <img src="https://web.archive.org/web/20090830035041im_/http://geocities.com/Area51/Shire/6078/lynx.gif" border="0">
+        <img src="https://web.archive.org/web/20091027083038im_/http://geocities.com/v_sharma/not_frontpage.gif" border="0">
+    </p>
+</center>
+
+</body>
+</html>

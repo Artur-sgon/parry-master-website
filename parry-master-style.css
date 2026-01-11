@@ -1,0 +1,189 @@
+/* 1. FONT DEFINITIONS */
+@font-face {
+    font-family: 'DeutschFont';
+    src: url('parry_master_files/Deutsch.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alagard';
+    src: url('parry_master_files/alagard.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Perfect DOS VGA 437', 'VT323', monospace !important;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    font-weight: 400 !important;
+}
+
+
+/* 2. GLOBAL STYLES */
+body {
+    background-color: #000000;
+    background-image: url("parry_master_files/stone_wall.png");
+    background-repeat: repeat;
+    color: #888888;
+    font-size: 18px; 
+    line-height: 1.1;
+    margin: 20px;
+}
+
+/* Default Link Colors */
+a:link    { color: #d8b000; text-decoration: none; }
+a:visited { color: #76545e; }
+a:hover   { color: #FFFFFF; text-decoration: underline; background: #430505; }
+a:active  { color: #FF0000; }
+
+/* FIX: Sidebar Menu Links - Always stay yellow even if visited */
+.sidebar a:link, 
+.sidebar a:visited { 
+    color: #d8b000; 
+}
+
+/* 3. LAYOUT ELEMENTS */
+.site-container {
+    border: 2px solid #333333;
+    background-color: #111111;
+    width: 980px;
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin: 20px auto;
+}
+
+.header-main {
+    background-image: url("parry_master_files/parry_master.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 180px;
+    text-align: center;
+    border: 1px solid #630808;
+    vertical-align: middle;
+}
+
+.footer-main {
+    background-color: #430505;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #630808;
+}
+
+.sidebar {
+    background-color: #000000;
+    vertical-align: top;
+    width: 240px;
+    padding: 15px;
+    line-height: 1.8;
+}
+
+.main-content {
+    background-color: #111111;
+    vertical-align: top;
+    padding: 20px;
+    text-align: justify;
+    font-size: 16px; 
+}
+
+.partner-box {
+    border: 1px solid #e06c00;
+    margin: 20px auto;
+    padding: 10px;
+    width: 85%;
+    background-color: #000000;
+}
+
+.partner-header {
+    background-color: #430505;
+    color: #FFFFFF;
+    padding: 5px;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #a2a2a2;
+    margin: 10px 0;
+}
+
+/* 4. TEXT CLASSES */
+.text-cyan    { color: #e06c00; }
+.text-red     { color: #FF0000; }
+.text-white   { color: #FFFFFF; }
+.text-grey    { color: #CCCCCC; }
+
+.gold-glow    { 
+    text-shadow: 1px 1px 0px #000000, 0 0 15px #a40000; 
+}
+
+.size-small   { font-size: 14px; }
+.size-large   { font-size: 28px; }
+
+h1 { 
+    font-family: 'DeutschFont', serif !important;
+    margin: 0; 
+    font-size: 72px; 
+    letter-spacing: 2px;
+    font-weight: normal !important;
+}
+
+h2 {
+    font-family: 'Alagard', serif !important;
+    color: #e06c00;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal !important;
+}
+
+/* 5. BUTTON MENU STYLES */
+.sidebar-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.nav-button {
+    display: block;
+    width: 259px;          
+    height: 32px;         
+    line-height: 32px;    
+    text-align: center;
+    background-image: url("parry_master_files/button_b.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    
+    /* Text Style - Forced Bold to override the global * { 400 } rule */
+    color: #ffc400 !important;
+    text-decoration: none !important;
+    font-weight: 500 !important; 
+    font-size: 16px; 
+    
+    transition: transform 0.05s;
+    background-color: transparent !important;
+}
+
+/* HOVER STATE: Texture change and lowering only */
+.nav-button:hover {
+    background-image: url("parry_master_files/button_pressed.png");
+    background-color: transparent !important; /* No red box on hover */
+    color: #ec0e19 !important;
+    text-decoration: none !important;
+    transform: translateY(2px);
+}
+
+/* CLICKED STATE: Red box appears while holding mouse button down */
+.nav-button:active {
+    background-color: #630808 !important; 
+    transform: translateY(3px);
+}
+
+.sidebar b {
+    display: block;
+    text-align: center;
+}
