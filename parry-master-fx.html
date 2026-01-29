@@ -1,0 +1,171 @@
+<html>
+<head>
+    <title>*** Parry Master - Devlog ***</title>
+    <meta name="DESCRIPTION" content="The history and legends of the Parry Master world.">
+
+    <!-- Load Professional DOS Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Shared Assets -->
+    <link rel="stylesheet" href="parry-master-style.css">
+    <script src="parry-master-shared.js"></script>
+    <style>
+        .roadmap-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #333;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .roadmap-table td, .roadmap-table th {
+            border: 1px solid #333;
+            padding: 4px 8px;
+            text-align: left;
+        }
+        .status-ready { color: #00ff00; } 
+        .status-wip { color: #fff71c; }   
+        .status-done { color: #0252ff; }
+        
+        /* Spacing for groups */
+        .spacer-row td {
+            height: 15px;
+            border-left: none !important;
+            border-right: none !important;
+            background-color: transparent;
+        }
+
+        .details-text {
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<center>
+    <table class="site-container">
+        <tbody>
+            <!-- HEADER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="header-main" id="shared-header"></td>
+            </tr>
+
+            <tr>
+                <!-- SIDEBAR (Injected by JS) -->
+                <td class="sidebar size-small" id="shared-sidebar"></td>
+
+                <!-- MAIN CONTENT AREA -->
+                <td class="main-content">
+                    
+                <h2>Visual FX</h2>
+                    <hr>
+                    <p>
+                        The columns are scenes. The cells are animations. 
+                    </p>
+                    <table class="roadmap-table">
+                        <tr class="partner-header">
+                            <th style="width: 16%;">player.tscn</th>
+                            <th style="width: 16%;">hit_burst.tscn</th>
+                            <th style="width: 16%;">casting_glow.tscn</th>
+                            <th style="width: 16%;">slash.tscn</th>
+                            <th style="width: 16%;">background_fx.tscn</th>
+                            <th style="width: 16%;">fire_fx.tscn</th>
+                        </tr>
+                        <tr>
+                            <td>block_up <br> block_down <br> block_left <br> block_right </td>
+                            <td class="details-text">block</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                        </tr>
+                        <tr>
+                            <td>(counter) <br> block_up <br> block_down <br> block_left <br> block_right</td>
+                            <td class="details-text">block_counter</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                        </tr>
+                        <tr>
+                            <td>parry_up <br> parry_down <br> parry_left <br> parry_right</td>
+                            <td class="details-text">parry</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                        </tr>
+                        <tr class="spacer-row"><td colspan="6"></td></tr>
+                        <tr>
+                            <td>basic_up <br> basic_down <br> basic_left <br> basic_right</td>
+                            <td class="details-text">basic</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">basic_up <br> basic_down <br> basic_left <br> basic_right</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">-</td>
+                        </tr>
+                        <tr>
+                            <td>basic_counter_up <br> basic_counter_down <br> basic_counter_left <br> basic_counter_right</td>
+                            <td class="details-text">basic_counter</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">basic_counter_up <br> basic_counter_down <br> basic_counter_left <br> basic_counter_right</td>
+                            <td class="details-text">counter</td>
+                            <td class="details-text">-</td>
+                        </tr>
+                        <tr class="spacer-row"><td colspan="6"></td></tr>
+                        <tr>
+                            <td>special_up <br> special_down <br> special_left <br> special_right</td>
+                            <td class="details-text">special</td>
+                            <td class="details-text">casting_glow</td>
+                            <td class="details-text">-</td>
+                            <td class="details-text">special</td>
+                            <td class="details-text">special_fire_up <br> special_fire_down <br> special_fire_left <br> special_fire_right</td>
+                        </tr>
+                        <tr>
+                            <td>special_counter_up <br> special_counter_down <br> special_counter_left <br> special_counter_right</td>
+                            <td class="details-text">special & basic_counter</td>
+                            <td class="details-text">casting_glow</td>
+                            <td class="details-text">special_counter_up <br> special_counter_down <br> special_counter_left <br> special_counter_right</td>
+                            <td class="details-text">special_counter</td>
+                            <td class="details-text">special_counter_fire_up <br> special_counter_fire_down <br> special_counter_fire_left <br> special_counter_fire_right</td>
+                        </tr>
+                        <tr class="spacer-row"><td colspan="6"></td></tr>
+                        <tr>
+                            <td>super_up <br> super_down <br> super_left <br> super_right</td>
+                            <td class="details-text">special & basic</td>
+                            <td class="details-text">super_casting_glow</td>
+                            <td class="details-text">super_up <br> super_down <br> super_left <br> super_right</td>
+                            <td class="details-text">special</td>
+                            <td class="details-text">super_fire_up <br> super_fire_down <br> super_fire_left <br> super_fire_right</td>
+                        </tr>
+                        <tr>
+                            <td>super_counter_up <br> super_counter_down <br> super_counter_left <br> super_counter_right</td>
+                            <td class="details-text">special & basic_counter</td>
+                            <td class="details-text">super_casting_glow</td>
+                            <td class="details-text">super_counter_up <br> super_counter_down <br> super_counter_left <br> super_counter_right</td>
+                            <td class="details-text">special_counter</td>
+                            <td class="details-text">super_counter_fire_up <br> super_counter_fire_down <br> super_counter_fire_left <br> super_counter_fire_right</td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+
+            <!-- FOOTER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="footer-main text-grey size-small" id="shared-footer"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Geocities Badges -->
+    <p>
+        <img src="https://web.archive.org/web/20090830035041im_/http://geocities.com/Area51/Shire/6078/lynx.gif" border="0">
+        <img src="https://web.archive.org/web/20091027083038im_/http://geocities.com/v_sharma/not_frontpage.gif" border="0">
+    </p>
+</center>
+
+</body>
+</html>
