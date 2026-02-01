@@ -29,10 +29,10 @@
 
                 <!-- MAIN CONTENT AREA -->
                 <td class="main-content">
-                    <h2>Parry Master Fight System</h2>
+                    <h2>Parry Master game mechanics / fight system</h2>
                     <hr>
                     
-                    <p class="text-cyan" style="padding-left: 130px; padding-right: 20px;"> 
+                    <p class="quote-text"> 
                         "Hark, and fix this in thy soul: until the Six Sacred Tenets of War are mastered, thy path shall remain forever barren."<br>
                         -- Master
                     </p>
@@ -156,21 +156,23 @@
                         </tr>
                     </table>
 
-                    <!-- OPPONENT HP AND DEFENSE BARS SECTION -->
+                    <!-- OPPONENT HP AND POISE BARS SECTION -->
                     <br>
-                    <h2>Opponent HP and Defense bars</h2>
+                    <h2>Opponent HP and Poise bars</h2>
                     <hr>
                     
-                    <p style="padding-left: 40; padding-right: 30; color: rgb(236, 160, 20);">
-                        Note: The following damage table is untested and assumes a very easy opponent starts with 100 HP and 100 Defense Bar.
+                    <p class="note-text">
+                        Note: Provisional values for initial gameplay testing.
+                        The damage values in this table are tuned against a "Very Easy" opponent.
+                        Tuning will be different for each boss.
                     </p>
                     <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-bottom: 20px;">
                         <tr class="partner-header">
-                            <td colspan="2" style="border: 1px solid #333; text-align: center;"><b>Opponent HP Bar Damage</b></td>
+                            <td colspan="2" style="border: 1px solid #333; text-align: center;"><b>Opponent HP Bar Damage (HP 100)</b></td>
                         </tr>
                         <tr class="spacer-row" ><td colspan="2"><div style="height: 8px;"></div></td></tr>
                         <tr class="partner-header">
-                            <td style="width: 50%; border: 1px solid #333;"><b>Squire Attack</b></td>
+                            <td style="width: 50%; border: 1px solid #333;"><b>Squire attacks</b></td>
                             <td style="width: 50%; border: 1px solid #333;"><b>Damage Inflicted</b></td>
                         </tr>
                         <tr>
@@ -201,12 +203,12 @@
                         <tr class="spacer-row" ><td colspan="2"><div style="height: 20px;"></div></td></tr>
                         
                         <tr class="partner-header">
-                            <td colspan="2" style="border: 1px solid #333; text-align: center;"><b>Opponent Defense Bar Damage</b></td>
+                            <td colspan="2" style="border: 1px solid #333; text-align: center;"><b>Opponent Poise Bar Damage (Poise 100)</b></td>
                         </tr>
                         <tr class="spacer-row" ><td colspan="2"><div style="height: 8px;"></div></td></tr>
 
                         <tr class="partner-header">
-                            <td style="border: 1px solid #333;"><b>Squire Attack Blocked</b></td>
+                            <td style="border: 1px solid #333;"><b>Squire attacks (Blocked)</b></td>
                             <td style="border: 1px solid #333;"><b>Damage Inflicted</b></td>
                         </tr>
                         <tr>
@@ -235,7 +237,7 @@
                         </tr>
 
                         <tr class="partner-header">
-                            <td style="border: 1px solid #333;"><b>Opponent Attack Parried</b></td>
+                            <td style="border: 1px solid #333;"><b>Enemy attacks (Parried by Squire)</b></td>
                             <td style="border: 1px solid #333;"><b>Damage Inflicted</b></td>
                         </tr>
                         <tr>
@@ -269,6 +271,127 @@
                         100% health = 100% regen speed <br>
                         50% health = 50% regen speed
                     </p>
+
+
+
+                    <!-- SQUIRE HP AND DEFENSE BARS SECTION -->
+                    <br>
+                    <h2>Squire HP and Defense bars</h2>
+                    <hr>
+
+                    <!-- NEW ILLUSTRATION -->
+                    <div style="text-align: center; margin-top: 20px;">
+                        <img src="parry_master_files/squire_bars.png">
+                    </div>
+                    
+                    <p class="note-text">
+                        Note: Provisional values for initial gameplay testing. 
+                        The damage values in this table are tuned against a "Very Easy" opponent.
+                        Tuning will be different for each boss.
+                    </p>
+                    <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-bottom: 20px;">
+                        <tr class="partner-header">
+                            <td colspan="2" style="border: 1px solid #333; text-align: center;"><b>Squire HP Bar Damage (HP 100)</b></td>
+                        </tr>
+                        <tr class="spacer-row" ><td colspan="2"><div style="height: 8px;"></div></td></tr>
+                        <tr class="partner-header">
+                            <td style="width: 50%; border: 1px solid #333;"><b>Opponent Attack</b></td>
+                            <td style="width: 50%; border: 1px solid #333;"><b>Damage Inflicted</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Basic</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">10</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Basic Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">15</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">20</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">30</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Super</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">50</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Super Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">75</td>
+                        </tr>
+
+                        <tr class="spacer-row" ><td colspan="2"><div style="height: 20px;"></div></td></tr>
+                        
+                        <tr class="partner-header">
+                            <td colspan="2" style="border: 1px solid #333; text-align: center;"><b>Squire Poise Bar Damage (Poise 100)</b></td>
+                        </tr>
+                        <tr class="spacer-row" ><td colspan="2"><div style="height: 8px;"></div></td></tr>
+
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Opponent Attacks (Blocked)</b></td>
+                            <td style="border: 1px solid #333;"><b>Damage Inflicted</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Basic</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">10</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Basic Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">20</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">30</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">40</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Super</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">50</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Super Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">60</td>
+                        </tr>
+
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Squire Attack Parried (by enemy)</b></td>
+                            <td style="border: 1px solid #333;"><b>Damage Inflicted</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Basic</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">20</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Basic Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">30</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">40</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">50</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Super</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">60</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Super Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">70</td>
+                        </tr>
+                    </table>
+
+
+
+
 
                    
                 </td>
