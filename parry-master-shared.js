@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <a href="parry-master-characters.html" class="nav-button">Characters</a>
                 <a href="parry-master-ost.html" class="nav-button">Soundtrack</a>
                 <a href="parry-master-fx.html" class="nav-button">FX table</a>
+                <a href="parry-master-demo.html" class="nav-button">Play the game!</a>
             </div>
         `;
     }
