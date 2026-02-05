@@ -110,11 +110,9 @@ hr {
 
 /* 4. TEXT CLASSES */
 .text-cyan    { color: #e06c00; }
-.text-red     { color: #f44336; }
-.text-green   { color: #4CAF50; }
+.text-red     { color: #FF0000; }
 .text-white   { color: #FFFFFF; }
 .text-grey    { color: #CCCCCC; }
-
 
 .gold-glow    { 
     text-shadow: 1px 1px 0px #000000, 0 0 15px #a40000; 
