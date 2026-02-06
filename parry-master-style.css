@@ -116,6 +116,23 @@ hr {
 .text-grey    { color: #CCCCCC; }
 
 
+/* TABLE CELLS */
+
+.table-green {
+    padding: 5px;
+    border: 1px solid #333;
+    color: #4CAF50;
+}
+
+.table-red {
+    padding: 5px;
+    border: 1px solid #333;
+    color: #f44336;
+}
+
+  
+
+
 .gold-glow    { 
     text-shadow: 1px 1px 0px #000000, 0 0 15px #a40000; 
 }
