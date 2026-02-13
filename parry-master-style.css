@@ -1,5 +1,10 @@
 /* 1. FONT DEFINITIONS */
 @font-face {
+    font-family: 'ModernDOS';
+    src: url('parry_master_files/ModernDOS9x16.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'DeutschFont';
     src: url('parry_master_files/Deutsch.ttf') format('truetype');
 }
@@ -10,7 +15,8 @@
 }
 
 * {
-    font-family: 'Perfect DOS VGA 437', 'VT323', monospace !important;
+    /* Changed 'Perfect DOS VGA 437' to 'ModernDOS' */
+    font-family: 'ModernDOS', 'VT323', monospace !important;
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeSpeed;

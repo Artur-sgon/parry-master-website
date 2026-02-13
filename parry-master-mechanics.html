@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>*** Parry Master - Game Mechanics ***</title>
     <meta name="DESCRIPTION" content="Learn the combat systems and strategies of Parry Master.">
 
     <!-- Load Professional DOS Fonts -->
-    <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <!-- Link to the shared script -->
@@ -77,6 +77,56 @@
                         <li>A successful parry will restore a point to your guard bar and stun the opponent.</li>
                         <li>Any attack on a stunned opponent turns into a counter attack and inflicts extra damage.</li>
                     </ul>
+                    <p style="text-align: center;">* * *</p>
+                    <br>
+                    <!-- COMBO SYSTEM -->
+                    <h2>Combos (esboço)</h2>
+                    <hr>
+
+                    <p>
+                        Vão ser grupos de 3 golpes seguidos q vão sair automáticos com um comando;
+                        no ultimo golpe o oponente pode stunar, o q possibilita encaixar mais um combo, ou um special/super attack.<br>
+                        <br>
+                        Pra implementar o combo, achei melhor adicionar um botão e mudar o comando 
+                        do special attack. Então ficaria assim agora (pensando no teclado):<br>
+                        <br>
+                        B = block<br>
+                        N = special<br>
+                        M = super<br>
+                        <br>
+                        block + (3x)attack = combo<br>
+                        special + attack = special attack<br>
+                        super + attack = super attack<br>
+                        <br>
+                        Comando: O combo seria acionado segurando block e apertando rapidamente 
+                        uma sequencia específica de 3 direções; se for lento, 
+                        o combo não sai (a gente testa o tempo de acionamento)<br>
+                        <br>
+                        Acerto: segue a mesma mecanica dos outros, tem q acertar a direção vulneravel do oponente. 
+                        Pra ficar mais intuitivo, a primeira direção poderia ser sempre a direção correta, ou seja, 
+                        se o oponente ta com a guarda em cima: o ataque certo é down, então o combo poderia ser 
+                        block + down, right, left (os dois golpes seguintes a gente define seguindo qq logica, ou nenhuma)<br>
+                        Então, por exe:<br>
+                        <br>
+                        UP: block + ↑ ← →<br>
+                        DOWN: block + ↓ ↑ ←<br>
+                        RIGHT: block + → ← ↓<br>
+                        LEFT: block + ← ↓ ↑<br>
+                        <br>
+                        Conectando combos: se o oponente stuna no final do combo, 
+                        a direção correta pra conectar o próximo teria q ter alguma logica, 
+                        talvez (ja q o primeiro foi definido pelo guard do oponente, 
+                        mas agora ele nao ta fazendo nenhum guard, ta só apanhando);
+                        minhas unica ideia: sentido horario, se o combo começo em UP, o proximo é RIGHT, etc<br>
+                        <br>
+                        No jogo, os combos poderiam ja ta disponiveis desde o começo, 
+                        mas o player ainda não sabe e poderia fazer sem querer. 
+                        Mas durante o jogo ele pode aprender. Pra não ficar muito focado no mestre, 
+                        os combos podem ser aprendidos se o player voltar a lutar com os boss. 
+                        Na segunda luta com cada boss o player pode aprender uma direção talvez.<br>
+                        <br>
+                        <p style="text-align: center;">* * *</p>
+                    </p>
 
 
                     <!-- OPPONENT VULNERABILITY SECTION -->
@@ -153,6 +203,8 @@
                             <td style="padding: 5px; border: 1px solid #333;" class="text-white">Left</td>
                         </tr>
                     </table>
+                    <p style="text-align: center;">* * *</p>
+                    <br>
 
                     <!-- OPPONENT HP AND POISE BARS SECTION -->
                     <br>
@@ -391,6 +443,8 @@
                             <td style="padding: 5px; border: 1px solid #333;" class="text-white">70</td>
                         </tr>
                     </table>
+
+                    <p style="text-align: center;">* * *</p>
 
                     <!-- ATTACK VS ATTACK -->
                     <br>
