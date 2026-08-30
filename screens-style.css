@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "dos";
+  src: url('parry_master_files/ModernDOS9x16.ttf');
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+hr {
+  visibility: hidden;
+}
+
+td {
+    font-size: larger;
+}
+
+body {
+    padding: 10px;
+    margin: 0;
+    font-family: monospace;
+    font-size: larger;
+    background-color: rgb(43, 83, 102);
+}
+
+.canvas {
+    position: relative;
+    background-color: rgb(206, 190, 98);
+    width: 640px;
+    height: 320px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    /* padding: 16px; */
+}
+
+.center-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.simple-button {
+    cursor: pointer;
+    background-color: rgb(187, 109, 109);
+    color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    padding-inline: 16px;
+    margin: 3px;
+}
+.transp-button {
+    background-color: rgb(202, 196, 143);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    padding-inline: 16px;
+    margin: 3px;
+}
+
+.row-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-left-corner {
+    position: absolute;
+    bottom: 0;     /* sticks to bottom */
+    left: 0;       /* sticks to left */
+}
+
+.bottom-right-corner {
+    position: absolute;
+    bottom: 0;     /* sticks to bottom */
+    right: 0;       /* sticks to left */
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 10px;
+    width: 640px;
+    height: 322px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+    z-index: 999;              /* appears on top of everything */
+}
+
+.popup-box {
+    color: rgb(190, 174, 153);
+    background-color: black;
+    padding: 30px;
+    min-width: 200px;
+    max-width: 200px;
+    text-align: center;
+}
