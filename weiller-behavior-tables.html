@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>*** Weiller AI Neural Matrix ***</title>
+    <meta name="DESCRIPTION" content="Internal behavior matrix for Weiller Boss AI.">
+
+    <!-- Load Professional DOS Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Link to the shared style and script -->
+    <link rel="stylesheet" href="parry-master-style.css">
+    <script src="parry-master-shared.js"></script>
+</head>
+
+<body>
+
+<center>
+    <table class="site-container">
+        <tbody>
+            <!-- HEADER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="header-main" id="shared-header"></td>
+            </tr>
+
+            <tr>
+                <!-- SIDEBAR (Injected by JS) -->
+                <td class="sidebar size-small" id="shared-sidebar"></td>
+
+                <!-- MAIN CONTENT AREA -->
+                <td class="main-content">
+                    <h2>Weiller's Behavioral Pattern AI Neural Matrix System of Doom</h2>
+                    <hr>
+
+                    <!-- 1. MODE PROBABILITY MATRIX -->
+                    <h2>1. Mode Probability Matrix</h2>
+                    <p>
+                        Each mode defines the enemy's temperament.
+                        At each decision step, the next state is randomly rolled against that mode's probabilities.
+                        No state may repeat more than twice consecutively.
+                    </p>
+
+                    <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-bottom: 20px;">
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333; background-color: rgb(22, 22, 22);">- - -</td>
+                            <td style="border: 1px solid #333;" colspan="4"><b>MODES:</b></td>
+                            
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>↓ States ↓</b></td>
+                            <td style="border: 1px solid #333;"><b>Normal</b></td>
+                            <td style="border: 1px solid #333;"><b>No-taunt</b></td>
+                            <td style="border: 1px solid #333;"><b>Aggressive</b></td>
+                            <td style="border: 1px solid #333;"><b>Mocking</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;"><b class="text-white">IDLE</b></td>
+                            <td style="padding: 5px; border: 1px solid #333;">20%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">30%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">10%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">10%</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;"><b class="text-white">TAUNT</b></td>
+                            <td style="padding: 5px; border: 1px solid #333;">20%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">0%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">0%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">50%</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;"><b class="text-white">GUARD</b></td>
+                            <td style="padding: 5px; border: 1px solid #333;">30%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">35%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">20%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">20%</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;"><b class="text-white">ATTACK</b></td>
+                            <td style="padding: 5px; border: 1px solid #333;">30%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">35%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">70%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">20%</td>
+                        </tr>
+                    </table>
+
+                    <!-- <p style="text-align: center;">* * *</p> -->
+
+                    <!-- 2. STATES LOGIC -->
+                    <h2>2. States Logic</h2>
+                    <hr>
+
+                    <!-- IDLE -->
+                    <b class="text-white">IDLE STATE</b>
+                    <p>Duration: 1 to 3 seconds</p>
+                    <p class="text-white">When enemy is hit during IDLE:</p>
+                    <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-bottom: 20px;">
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Action</b></td>
+                            <td style="border: 1px solid #333;"><b>Chance</b></td>
+                            <td style="border: 1px solid #333;"><b>Player attack</b></td>
+                            <td style="border: 1px solid #333;"><b>Transition to</b></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">Blocks</td>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">40%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Normal / Combo</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Normal Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special / Super</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Mocking Mode</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">Gets hit</td>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">40%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Normal / Combo</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Normal Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special / Super</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Aggressive Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Parries</td>
+                            <td style="padding: 5px; border: 1px solid #333;">20%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Any attack</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Counter Attack</td>
+                        </tr>
+                    </table>
+                    <hr>
+
+                    <!-- TAUNT -->
+                    <b class="text-white">TAUNT STATE</b>
+                    <p>Duration: Only one animation (3 possible animations).</p>
+                    <p>After taunt: "No-taunt mode" for 10s OR until player gets hit/blocked.</p>
+                    <p class="text-white">When enemy is hit during TAUNT:</p>
+                    <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-bottom: 20px;">
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Action</b></td>
+                            <td style="border: 1px solid #333;"><b>Chance</b></td>
+                            <td style="border: 1px solid #333;"><b>Condition</b></td>
+                            <td style="border: 1px solid #333;"><b>Transition to</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Parries</td>
+                            <td style="padding: 5px; border: 1px solid #333;">40%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Any attack</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Counter Attack</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Gets hit</td>
+                            <td style="padding: 5px; border: 1px solid #333;">40%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Any attack</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Aggressive Mode</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">Blocks</td>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">20%</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Normal / Combo</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Normal Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special / Super</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Mocking Mode</td>
+                        </tr>
+                    </table>
+                    <hr>
+
+                    <!-- GUARD -->
+                    <b class="text-white">GUARD STATE</b>
+                    <p>Duration: 1.5 to 2s per direction (sequence of 1-3 directions).</p>
+                    <p class="text-white">When enemy is hit during GUARD:</p>
+                    <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-bottom: 20px;">
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Player attack <br>direction</b></td>
+                            <td style="border: 1px solid #333;"><b>Reaction</b></td>
+                            <td style="border: 1px solid #333;"><b>Player attack</b></td>
+                            <td style="border: 1px solid #333;"><b>Transition to</b></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">✔ Correct</td>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">Gets Hit</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Normal / Combo</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Normal Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special / Super</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Aggressive Mode</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">✖ Wrong</td>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">65% Blocks</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Normal / Combo</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Normal Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special / Super</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Mocking Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">✖ Wrong</td>
+                            <td style="padding: 5px; border: 1px solid #333;">35% Parries</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Counter Attack</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Mocking Mode</td>
+                        </tr>
+                    </table>
+                    <hr>
+
+                    <!-- ATTACK -->
+                    <b class="text-white">ATTACK STATE</b>
+                    <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-top: 10px;">
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Phase</b></td>
+                            <td style="border: 1px solid #333;"><b>How many attacks</b></td>
+                            <td style="border: 1px solid #333;"><b>Available Moves</b></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">1</td>
+                            <td style="padding: 5px; border: 1px solid #333;">1-3</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Basic, Special, Combo, <br>Basic + Opposite Special</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">2</td>
+                            <td style="padding: 5px; border: 1px solid #333;">2-4</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Basic, Special, Super, Combo, <br>Basic + Opposite Special</td>
+                        </tr>
+                    </table>
+
+                    <br>
+                    <table style="width: 100%; border: 1px solid #333; border-collapse: collapse; margin-bottom: 20px;">
+                        <tr class="partner-header">
+                            <td style="border: 1px solid #333;"><b>Situation</b></td>
+                            <td style="border: 1px solid #333;"><b>Condition</b></td>
+                            <td style="border: 1px solid #333;"><b>Transition to</b></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="padding: 5px; border: 1px solid #333;">Hits Player</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Normal / Combo</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Normal Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Special / Super / Counter</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Mocking Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Gets Blocked</td>
+                            <td style="padding: 5px; border: 1px solid #333;">-</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Normal Mode</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4" style="padding: 5px; border: 1px solid #333;">Parried/Stunned</td>
+                            <td style="padding: 5px; border: 1px solid #333;">Player No-React</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Aggressive Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Player Correct Counter (Normal)</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Normal Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Player Correct Counter (Spec/Super)</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Aggressive Mode</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border: 1px solid #333;">Player Wrong Dir (enemy blocks)</td>
+                            <td style="padding: 5px; border: 1px solid #333;" class="text-white">Mocking Mode</td>
+                        </tr>
+                    </table>
+
+                    <p style="text-align: center;">* * *</p>
+                    
+                </td>
+            </tr>
+
+            <!-- FOOTER (Injected by JS) -->
+            <tr>
+                <td colspan="2" class="footer-main text-grey size-small" id="shared-footer"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Geocities Badges -->
+    <p>
+        <img src="https://web.archive.org/web/20090830035041im_/http://geocities.com/Area51/Shire/6078/lynx.gif" border="0">
+        <img src="https://web.archive.org/web/20091027083038im_/http://geocities.com/v_sharma/not_frontpage.gif" border="0">
+    </p>
+</center>
+
+</body>
+</html>
