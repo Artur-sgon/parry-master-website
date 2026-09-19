@@ -123,45 +123,98 @@
                             <td class="status-done">done</td>
                             <td>---</td>
                         </tr>
-                        
-
-
                     </table>
 
                     <br>
                     <br>
 
 
-                    <!-- DEVLOG SECTION -->
+                    <!-- ====== DEVLOG SECTION ====== -->
 
                     <h2>Devlog</h2>
                     <hr>
-                    <p class="text-white">
-                        2025:
-                    </p>
-                    <p>
-                        We did a bunch of shit.
-                    </p>
-                    <hr>
+                    
+                    <table class="roadmap-table">
+                        <tr class="partner-header">
+                            <th style="width: 25%;">Task</th>
+                            <th style="width: 45%;">Details</th>
+                            <th style="width: 15%;">Status</th>
+                            <th style="width: 15%;">Deadline</th>
+                        </tr>
 
-                    <p class="text-white">
-                        Friday, 9th January 2026:
-                    </p>
-                    <p>
-                        Website up!
-                    </p>
-                    <hr>
+                        <!-- COMBAT & COMBO SYSTEM -->
+                        <tr>
+                            <td colspan="4"><b class="text-white">(Combat & Combo System)</b></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Animação do oponente quando recebe multiple hits</td>
+                            <td class="details-text">
+                                Pros combos e supers (q tem multiplos hits) o oponente deve repetir a animação de hurt a cada hit recebido, se a animação (hurt) não terminou antes do próximo hit, ela é interrompida pela próxima hurt.
+                            </td>
+                            <td class="status-wip">wip</td>
+                            <td>---</td>
+                        </tr>
 
-                    <p class="text-white">
-                        Sunday, 11th January 2026:
-                    </p>
-                    <p>
-                        Website has new menu buttons!
-                    </p>
+                        <tr>
+                            <td>Oponente stunned by combo</td>
+                            <td class="details-text">
+                                When poise-broken, the opponent can be stunned at the end of the combo.
+                            </td>
+                            <td class="status-wip">wip</td>
+                            <td>---</td>
+                        </tr>
 
+                        <tr>
+                            <td>Combo Chain</td>
+                            <td class="details-text">
+                                When a combo stuns the opponent, the player may chain up to 4 combos in total. (Experimental idea: chained combos must follow a clockwise order based on the first directional input of the initial combo).<br><br>
+                                <strong>Example (clockwise order: LEFT → UP → RIGHT → DOWN):</strong><br>
+                                • block + ←↓← (first direction: LEFT)<br>
+                                • block + ↑↓↑ (first direction: UP)<br>
+                                • block + →↓→ (first direction: RIGHT)<br>
+                                • block + ↓↑↓ (first direction: DOWN)
+                            </td>
+                            <td class="status-wip">wip</td>
+                            <td>---</td>
+                        </tr>
+
+                        <tr>
+                            <td>Combo Outcomes</td>
+                            <td class="details-text">
+                                <strong>1 (direção errada):</strong> oponente bloqueia tudo e player perde a barra de especial. No último hit:<br>
+                                &nbsp;&nbsp;1.1 (50% chance) oponente bloqueia normal<br>
+                                &nbsp;&nbsp;1.2 (50% chance) oponente faz parry e segue com um counter<br><br>
+                                <strong>2 (direção certa):</strong> (80% chance) oponente toma os hits mas faz parry no ultimo (somente no último) e segue com um counter. Então:<br>
+                                &nbsp;&nbsp;2.1 player vacila e toma (sofre dano e perde a barra de especial)<br>
+                                &nbsp;&nbsp;2.2 player reage com parry e se salva (preserva a barra de especial)<br><br>
+                                <strong>3 (direção certa):</strong> (20% chance) oponente toma tudo.
+                            </td>
+                            <td class="status-wip">wip</td>
+                            <td>---</td>
+                        </tr>
+
+                        <tr class="spacer-row"><td colspan="4"></td></tr>
+
+                        <!-- ROUND SYSTEM & FLOW -->
+                        <tr>
+                            <td colspan="4"><b class="text-white">(Round & Match Flow)</b></td>
+                        </tr>
+
+                        <tr>
+                            <td>"Rounds" / Life Loss Flow</td>
+                            <td class="details-text">
+                                Quando o oponente perde a primeira vida: time freeze no ultimo golpe → red FX → barras regeneram. Depois da animação de hurt (q fez perder a vida) o inimigo faz uma animação de "recuperando-se", enquanto isso squire mantem em idle normal sem input. Tudo isso vai durar poucos segundos... (talvez 3). O "red FX" some como no começo da luta, a luta é retomada qd o efeito some por completo.<br><br>
+                                <em>OBS:</em> o Squire também terá vidas, então o mesmo acontece (testemos os dois).
+                            </td>
+                            <td class="status-wip">wip</td>
+                            <td>---</td>
+                        </tr>
+                    </table>
                     <br>
                     <br>
-               
+                    
+                    <!-- ====== ART ROAD MAP ====== -->
                     <h2>Art Roadmap</h2>
                     <hr>
                     
